@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <section
+      class="p-4 max-w-sm mx-auto border border-2 border-blue-300 rounded-lg overflow-y-hidden"
+    >
+      <!-- Balance Section -->
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6 text-center">
+        <h1 class="text-2xl font-bold text-gray-700">Your Balance</h1>
+        <p id="balance" class="text-4xl text-blue-500 font-semibold">200</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Add Money -->
+        <button
+          id="add-btn"
+          class="bg-blue-500 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-all"
+        >
+          Add Money
+        </button>
+
+        <!-- Cash Out -->
+        <button
+          id="cash-btn"
+          class="bg-green-500 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-green-600 transition-all"
+        >
+          Cash Out
+        </button>
+
+        <!-- Mobile Recharge -->
+        <button
+          id="mobile-recharge-btn"
+          class="bg-yellow-500 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-yellow-600 transition-all"
+        >
+          Mobile Recharge
+        </button>
+
+        <!-- Transaction History -->
+        <button
+          id="transaction-btn"
+          class="bg-gray-500 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-gray-600 transition-all"
+        >
+          Transaction History
+        </button>
+      </div>
+
+      <!-- Add Money Form -->
+      <form id="add-money-form" class="mt-4 hidden">
+        <h2 class="text-xl font-semibold mb-4 text-center">Add Money</h2>
+        <div class="mb-4">
+          <label for="amount" class="block text-gray-700 font-medium mb-2"
+            >Enter Amount</label
+          >
+          <input
+            type="text"
+            id="add-money-amount"
+            name="amount"
+            class="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Amount"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="pin" class="block text-gray-700 font-medium mb-2"
+            >Enter PIN</label
+          >
+          <input
+            type="password"
+            id="add-money-pin"
+            name="pin"
+            class="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="PIN"
+          />
+        </div>
+        <button
+          id="add-money"
+          type="submit"
+          class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg shadow-md hover:bg-blue-600 transition-all"
+        >
+          Add Money
+        </button>
+      </form>
+
+      <!-- Cash Out Form -->
+      <form id="add-cash-out-form" class="mt-4 hidden">
+        <h2 class="text-xl font-semibold mb-4 text-center">Cash Out</h2>
+        <div class="mb-4">
+          <label for="amount" class="block text-gray-700 font-medium mb-2"
+            >Enter Amount</label
+          >
+          <input
+            id="cash-out-amount"
+            type="text"
+            name="amount"
+            class="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            placeholder="Amount"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="pin" class="block text-gray-700 font-medium mb-2"
+            >Enter PIN</label
+          >
+          <input
+            id="cash-out-pin"
+            type="password"
+            name="pin"
+            class="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            placeholder="PIN"
+          />
+        </div>
+        <button
+          id="cash-out"
+          type="submit"
+          class="w-full bg-green-500 text-white font-bold py-2 rounded-lg shadow-md hover:bg-green-600 transition-all"
+        >
+          Cash Out
+        </button>
+      </form>
+      <!-- mobile recharge History -->
+      <div id="mobile-recharge" class="hidden">
+        <h1 class="text-4xl text-center">Mobile Recharge</h1>
+      </div>
+      <!-- transaction History  -->
+      <div id="transaction" class="hidden">
+        <h1 class="text-4xl text-center">Transaction History</h1>
+      </div>
+    </section>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/addmoney.js"></script>
+  </body>
+</html>
