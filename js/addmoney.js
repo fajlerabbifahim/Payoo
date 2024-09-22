@@ -12,6 +12,12 @@ document
       // transaction history
       const p = document.createElement("p");
       p.style.fontWeight = "bold";
+      p.style.backgroundColor = "green";
+      p.style.padding = "4px";
+      p.style.color = "white";
+      p.style.borderRadius = "5px";
+      p.style.marginTop = "4px";
+      p.style.marginBottom = "4px";
       p.innerText = `Add Money : ${addMoneyAmount} Current Balance : ${updateBalance}`;
       document.getElementById("transaction").appendChild(p);
     } else {
@@ -34,8 +40,13 @@ document.getElementById("cash-out").addEventListener("click", function (event) {
     if (balance >= CashOutAmount) {
       updateBalance = balance - CashOutAmount;
       const p = document.createElement("p");
-      p.style.color = "red";
+      p.style.color = "White";
       p.style.fontWeight = "bold";
+      p.style.backgroundColor = "red";
+      p.style.padding = "4px";
+      p.style.borderRadius = "5px";
+      p.style.marginTop = "4px";
+      p.style.marginBottom = "4px";
       p.innerText = `Cash Out : ${CashOutAmount}  New Balance : ${updateBalance}`;
       document.getElementById("transaction").appendChild(p);
     } else {
